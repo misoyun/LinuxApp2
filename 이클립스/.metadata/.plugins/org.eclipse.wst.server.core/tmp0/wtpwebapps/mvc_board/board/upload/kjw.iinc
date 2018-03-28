@@ -1,0 +1,3 @@
+<form action = "./to.jsp" method = "post">
+
+	<a href =  "BoardServlet?command=board_list">로그아웃</a>

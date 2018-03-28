@@ -1,0 +1,52 @@
+*자바 빈(java bean)
+-변수형태로 사용되면  value 들을 하나로 묶어서 처리
+-ex) id, pw ... --> user 객체 : (VO 클래스의 역할)
+-여러 변수를 묶어서 자바 객체로 사용하는 개념
+-jsp코드 간결
+-중복코드 방지
+------------------------------------------------------------
+*자바 빈 구현 규칙
+1) get, set 메소드를 필드별로 반드시 구현해야 함
+2) Serializable 인터페이스를 상속해야 함
+3) 기본 생성자를 반드시 구현 ()
+4) 필드: private / 메소드: public / 클래스: public
+5) 패키지 설정
+------------------------------------------------------------
+-빈 선언
+<jsp:useBean id = "빈 이름" class = "빈 클래스" scope = "범위"> : request, response, application, session
+-빈 속성
+-빈 멤버에 접근!
+<jsp:setProperty> <jsp:getProperty>
+
+
+값을 받는 방법1)	
+					<table border = "1">
+			<tr>
+				<td>아이디</td>
+				<td><%=user.getId() %></td>
+			</tr>
+			<tr>
+				<td>패스워드</td>
+				<td><%=user.getPw() %></td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><%=user.getName() %></td>
+			</tr>
+			<tr>
+				<td>나이</td>
+				<td><%=user.getAge() %></td>
+			</tr>
+			<tr>
+				<td>생일</td>
+				<td><%=user.getBirthday() %></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type = "submit" value = "가입"></td>
+				<td></td>
+				
+값을 받는 방법2)
+			<tr>
+				<td>아이디</td>
+				<td><jsp:getProperty name = "user" property="id"></td>
+			</tr>

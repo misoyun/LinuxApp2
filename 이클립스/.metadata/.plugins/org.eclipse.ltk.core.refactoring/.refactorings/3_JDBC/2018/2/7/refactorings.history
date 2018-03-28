@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;EMP_Table&apos; to &apos;EMP_Select&apos;&#x0D;&#x0A;- Original project: &apos;3_JDBC&apos;&#x0D;&#x0A;- Original element: &apos;EMP_Table&apos;&#x0D;&#x0A;- Renamed element: &apos;EMP_Select&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;EMP_Table&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{EMP_Table.java[EMP_Table" matchStrategy="1" name="EMP_Select" qualified="false" references="true" similarDeclarations="false" stamp="1518480878349" textual="false" version="1.0"/>
+</session>

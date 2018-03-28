@@ -1,0 +1,40 @@
+<div id="foorer-sctn">
+	<div id="footer-wrap">
+		<h1><img src="/images/Common/logo_footer.jpg" alt="비트컴퓨터" /></h1>
+    	<ul id="bm-sta">
+			<li><a href="/etc/privacy.aspx"><b>개인정보취급방침</b></a></li>
+        </ul>
+        <dl id="company-info">
+        	<dt>본사</dt>
+            <dd><address>서울특별시 서초구 서초대로 74길 33 비트빌딩</address></dd>
+            <dt>대표전화</dt>
+            <dd>02&#8211;3486&#8211;1234</dd>
+            <dt>팩스</dt>
+            <dd>02&#8211;3486&#8211;1983</dd>
+        </dl>
+        <p id="copyright">copyright &copy; 2013 bitcomputer all rights reserved. </p>
+        <div id="famsite">
+          <form name="selectlink">
+              <div style="display:none">
+              <label for="familysite">famliy site</label>
+              <label for="docbit">닥터비트 고객서비스</label>
+              <label for="medig">메디전트 고객서비스</label>
+              <label for="druginfo">약품정보 드러그인포</label>
+              <label for="jojae">조현정재단</label>
+              <label for="bitschool">비트 스쿨</label>
+                  </div>
+              <fieldset title="옵션 값들">
+                  <legend>famliy site</legend>
+                  <select id="fam-lst" name="selection" onChange="open_new()" title="셀렉트 가족사이트">
+                    <option selected="selected" title="패밀리사이트" id="familysite" label="famliy site">famliy site</option>
+					<option value="http://www.drbit.kr/" title="닥터비트 고객서비스" id="docbit" label="닥터비트 고객서비스">닥터비트 고객서비스</option>
+                    <option value="http://www.medigent.kr/" title="메디전트고객서비스" id="medig" label="메디전트 고객서비스">메디전트 고객서비스</option>
+                    <option value="http://www.druginfo.kr/" title="약품정보사이트 드러그인포" id="druginfo" label="약품정보 드러그인포">약품정보 드러그인포</option>
+                    <option value="http://www.chohyunjung.org/" title="조현정재단" id="jojae" label="조현정재단">조현정재단</option>
+                    <option value="http://www.bitacademy.com/" title="비트교육센터" id="bitschool" label="비트교육센터">비트교육센터</option>
+                  </select>
+              </fieldset>
+          </form>
+        </div>
+    </div>
+</div>

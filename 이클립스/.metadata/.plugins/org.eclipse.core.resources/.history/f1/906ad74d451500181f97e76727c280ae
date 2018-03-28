@@ -1,0 +1,10 @@
+<!DOCTYPE html>    <!-- 기본적인 html 구문 -->
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> Test HTML!!!</h1>
+</body>
+</html>

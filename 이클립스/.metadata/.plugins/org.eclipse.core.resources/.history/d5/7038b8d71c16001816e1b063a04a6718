@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<link rel = "stylesheet" type = "text/css" href = "css/reserve.css">
+
+</head>
+<body>
+	<form action="result.html"  method = "get" autpcomplete = "on" autofocus = "on">
+	<h1>상담 예약</h1>
+	<hr>
+	<table>
+		<tr>
+			<td>성명: </td><td input class = "jot" type = "text" name = "name" required></td>
+		</tr>
+		<tr>
+			<td>전화: </td><td input class = "jot" type = "text" maxlength = "13" placeholder = "00*-000*-0000" name = "callnum" ></td>
+		</tr>
+		<tr>
+			<td>이메일: </td><td input class = "jot" type = "email" placeholder = "***@***.***" name = "email"></td>
+		</tr>
+		<tr>
+			<td>원하는 상담사: </td><td input class = "jot" type = "text" name = "counseler" placeholder = "여름선생님 추천" ></td>
+		</tr>
+		<tr>
+			<td>예약 희망일: </td><td input class = "jot" type = "date" name = "reserve" ></td>
+		</tr>
+		<tr>
+			<td>희망 시간: </td><td input class = "jot" type = "time" name = "time1"  ~ input class = "jot" type = "time" name = "time2" > </td>
+		</tr>
+	<br>
+	
+	</table>
+	 <input class = "b" type = "submit" value = "예약하기" >  <!-- 전송 --> 
+	<hr>
+	</form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+//===================================================================================
+// DI (Dependency Injection)
+// -"주입!"
+//1. IoC (제어 역전) INVERT OF CONTROL
+// - 객체를 프로그래머가 직접 생성하는 것이 아니고, 외부의 다른 존재(스프링 내의 컨테이너)가 생성해서 제공하는 개념
+// 
+// * IOC 구현 방법!
+// 1. LOOKUP
+//		-JNDI 이용하는 방법 -> EJB에서 사용
+//		-JNDI 코드를 직접 작성
+//		-예외처리 구조 복잡
+// 2. DI (의존성 주입)
+
+//		-container자체가 lookup을 실행
+//		-컨테이너에 의존적인 코드를 작성하지 않아도 된다.
+// 		-특별한 인터페이스나 클래스를 상속하지 않아도 된다.
+//		- 방법! 1) 생성자 이용 2) setter함수 이용
+
+//===================================================================================
+// springcontainer    factory = container
+//===================================================================================
+//	- xml 파일에 등록된 bean(자바 클래스)들의 생성소멸주기와 의존성을 관리한다.
+// 1. BeanFactory
+// 2. ApplicationContext
+
+// - 경량 컨테이너
+//	-> 컨테이너를 구성하는 파일의 크기가 작고 대기시간이 없다.
+//  -> 부하가 적고 복잡하지 않은 형태
+
+// 컨테이너의 필요성
+// - 컴포넌트(구성요소) 관리  --> 삽입/삭제/검색
+// - 일관된 인터페이스 유지 --> 어떤 객체를 사용하더라도 비슷한 방식으로 사용할 수 있도록 함
+// - 개발자가 싱글톤, 팩토리 를 구현할 필요 없음.
+// - 엔터프라이즈 서비스 : 트렌젝션 관리  
+
+package com.example.container;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+
+	public static void main(String[] args)
+	{
+		// 1) xml 파일 로딩
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("/config/applicatihonContext.xml");
+		
+		//System.out.println(ctx.toString());
+		
+		User user1 = (User)ctx.getBean("user");
+		User user2 = (User)ctx.getBean("user1");
+		
+		
+		
+	}
+	
+}

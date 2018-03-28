@@ -1,0 +1,42 @@
+  POM.XML 에 빌드 끝나고 저장 (컨텍스트 모듈 추가 - spring core lib )
+  <!--  spring core lib : container -->
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>4.2.1.RELEASE</version>
+  	</dependency>
+  <!--  spring web lib -->	
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-web</artifactId>
+  		<version>4.2.1.RELEASE</version>
+  	</dependency>
+  <!-- spring MVC lib -->
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-webmvc</artifactId>
+  		<version>4.2.1.RELEASE</version>
+  	</dependency>
+  	
+  </dependencies>
+  ---------------------------------------------------------------
+  web.xml에 서블릿 정의
+  <servlet>
+  	<servlet-name>spring</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>spring</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  ---------------------------------------------------------------
+  spring-servlet.xml 설정 
+
+  	<!--  anotation 사용 설정  -->
+	<context:annotation-config />
+	<!-- spring controller 패키지 설정   -->
+	<context:component-scan base-package="com.example.springex.controller"></context:component-scan>	
+  
+  

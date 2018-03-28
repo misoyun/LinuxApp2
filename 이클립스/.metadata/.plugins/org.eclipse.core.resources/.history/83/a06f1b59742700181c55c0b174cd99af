@@ -1,0 +1,12 @@
+<%
+	String name = request.getParameter("name");
+	String password = request.getParameter("password");
+	
+	BoardVO vo = new BoardVO();
+	BoardDAO dao = new BoardDAO();
+	
+	vo.setName(name);
+	
+	dao
+
+%>

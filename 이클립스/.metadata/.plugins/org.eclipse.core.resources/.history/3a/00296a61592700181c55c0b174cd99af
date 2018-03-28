@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<!--  User user = new User(); 와 비슷한 개념 -->
+	<bean id="user" name="user1" class = "com.example.container.User"/>
+	<bean id="user4" class = "com.example.container.User"/>
+	<bean id="user5" class = "com.example.container.User">
+		<constructor-arg index="0" value= "1"></constructor-arg>
+		<constructor-arg index="1" value= "김철수"></constructor-arg>
+	</bean>	
+		
+	<bean id="user6" class = "com.example.container.User">
+		<property name="no" value="4885"></property>
+		<property name="name" value = "하정우"></property>
+	</bean>			
+		
+		
+</beans>

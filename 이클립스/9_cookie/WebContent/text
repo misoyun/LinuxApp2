@@ -1,0 +1,15 @@
+*cookie
+-client에 저장되는 파일!
+-하나의 사이트 당 20개
+-1개의 파일크기는 4kb
+-저장된 쿠키를 사용하여 사용자에 맞춘 서비스 가능! --> UX (User eXperience)
+-------------------------------------------------------------
+	getName :  쿠키이름
+	getValue:  쿠키값
+	setValue:  쿠키값
+	setDomain: 같은 도메인의 다른 서버에 전송 
+	getDomain: 같은 도메인의 다른 서버에 전송
+	getPath : 경로
+	setPath : 경로
+	getAge : 유효시간
+	setAge : 유효시간 설정 (-1 : 바로삭제)

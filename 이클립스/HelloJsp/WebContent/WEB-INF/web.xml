@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>HelloJsp</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!--  특정 에러 코드에 대한 처리 -->
+  <error-page> 
+  	<error-code>404</error-code> 
+  	<location>/error/error_page.jsp</location>
+   </error-page>
+  
+  <!--  Context parameter -->
+  <context-param>
+  	<param-name>  DB_NAME  </param-name>
+  	<param-value> htt://localost:1541:XE:ORACLE </param-value>
+  </context-param>
+
+  <servlet>
+    <servlet-name>MyFirstServlet</servlet-name>
+    <servlet-class>HelloServlet   </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyFirstServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MySecondServlet</servlet-name>
+    <servlet-class>BitServlet   </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MySecondServlet</servlet-name>
+    <url-pattern>/bit</url-pattern>
+  </servlet-mapping>
+  <!-- Param Servlet  -->
+  <servlet>
+    <servlet-name>MyParamServlet</servlet-name>
+    <servlet-class> ParamServlet </servlet-class>
+    <!--  해당 서블릿에서만 사용 가능  -->
+  	<init-param>
+      <param-name>filename</param-name>
+      <param-value>
+      	bit.txt
+      </param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyParamServlet</servlet-name>
+    <url-pattern>/Param</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+

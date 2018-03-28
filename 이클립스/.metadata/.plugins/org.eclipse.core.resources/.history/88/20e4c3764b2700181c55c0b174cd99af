@@ -1,0 +1,13 @@
+package com.example.container;
+
+public class User {
+
+	private Long no;
+	private String name;
+	private Friend friend;  //다른 클래스의 객체 참조변수가 필드값으로 옴
+	
+	
+	
+	
+	
+}

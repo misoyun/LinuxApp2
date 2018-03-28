@@ -1,0 +1,98 @@
+180227
+
+
+
+JSP OBJECT
+=======================================================
+-JSP 파일이 서블릿 클래스로 변횐될 때 서블릿클래스에 기본으로 내장되는 객체(변수)
+	-REQUEST : 요청
+	-RESPONSE: 응답
+	-PageContext: 페이지정보
+	-Session : 사용자 정보
+	-out : 출력정보
+	-config : 구성정보
+	-application : 실행 상태 정보
+=======================================================
+
+	*request 기본 객체 : 클라이언트의 요청 정보
+	
+		-getParameter : 클라이언트의 전송 데이터
+		-getParameterNames
+		-getParameterValues
+		
+		-getMethod : get / post
+		-getCookies : 쿠키값을 배열형태로 리턴!
+		 (쿠키란? 이전 사용정보를 담고있는 것)
+		 
+		-getProtocal : http 1.1...
+		-getServerName : 서버 정보
+		-getServerPort : 포트 정보
+		
+		-getqueryString: get방식의 문자열 url 을 가져옴
+		-setCharacterEncoding: 한글처리!
+		
+==========================================================================
+		1        2        3                                    4
+		http://localhost:8080/4_JspObject/requestAction.jsp?info=army
+		
+		포토콜/ 서버네임/ 서버포트/ 쿼리스트링  
+		
+==========================================================================
+
+	*response : 사용자 요청에 대한 응답 처리!
+	
+		-setContentType : 인코딩
+		-getWriter : out 객체 생성
+		-sendRedirect : 클라이언트 요청을 다른 페이지로 보낸다 ... 페이지 전환
+		
+==========================================================================
+
+	*out : 브라우저 출력
+
+		-getBufferSize  :크기
+		-getRemining    :상태
+		-clearBuffer    :정리
+		-flush		    :청소
+				
+==========================================================================
+	
+	*config 객체 : jsp, servlet 마다 생성되는 설정정보 객체
+
+		-getInitParameterNames() : 설정정보들
+		-getInitParameter("name")
+		-getServletContext() : 서블릿 객체
+
+==========================================================================
+
+	*application 객체 : 서블릿의 실행환경 정보, 서버정보, 로그 기록
+	
+		-getServerInfo : 서버 정보
+		-getMajorVersion: API 정보
+		-log : 로그 기록
+
+==========================================================================
+
+	*pageContext 객체 : 페이지 내의 다른 객체를 리턴!
+	
+		-getRequest
+		-getPage
+		-getResponse
+		-getOut
+		-getSession
+		-getServletConfig	
+
+==========================================================================
+
+	*서버 관련 메소드
+	
+	-forward : 지정된 페이지로 이동
+	-include : 페이지 추가
+
+==========================================================================
+
+	* exception 객체
+	
+		-getMessage
+		-printStackTrace
+
+==========================================================================

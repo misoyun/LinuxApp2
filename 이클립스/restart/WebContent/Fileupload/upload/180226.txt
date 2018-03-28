@@ -1,0 +1,58 @@
+서버를 구성하는 로직을 짜는 언어를 자바로 만든 것 --> jsp
+
+servlet  : 서버에서의 애플릿(자바로 만들어진 응용프로그램)
+
+자바코드안에 html코드를 넣어서 동적으로 만들어내는 것
+- 복잡해지기 때문에 jsp를 만들게 된 것
+
+
+
+
+jsp  : 
+
+자바리소스 - 자바코드가 들어감, 즉 서블릿이 들어감
+
+웹컨텐츠 - html, jsp가 들어감
+
+------------------------------
+<servlet> 
+	<servlet-name> MyFirstServlet </servlet-name>
+	<servlet-class> HelloServlet </servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name> MyFirstServlet </servlet-name> 
+	<url-pattern>/hello</url-pattern>
+</servlet-mapping>
+
+
+------------------------------
+<servlet> 
+	<servlet-name> MySecondServlet </servlet-name>
+	<servlet-class> BitServlet </servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name> MySecondServlet </servlet-name> 
+	<url-pattern>/bit</url-pattern>
+</servlet-mapping>
+
+------------------------------
+<!-- web.xml -->
+	1) servlet 등록
+	2) 초기화 파라미터
+		- 특정 서블릿에서 사용가능한 변수 선언
+		- 전체 서블릿에서 사용가능한 변수 선언
+
+
+/**
+ * Servlet implementation class HelloServlet
+ *  서블릿 클래스 작성 지침 !! 
+ *  1) 서블릿 클래스는 public 작성 !!  :  톰캣에서 접근해서 사용  
+ *  2) httpServlet 클래스를 상속 javax.servlet , javax.servlet.http 패키지 Import 필요 !!
+ *  3)  doGet :    GET방식을 사용하는 모든 HTTP 요청을 처리 
+ *  4)  doPost :  POST방식을 사용하는 모든 HTTP 요청을 처리 
+ *  5) doGet, doPost 매개변수 !! 
+ *     HttpServletRequest  :  클라이언트로 부터 전송된 요청 정보 ( 데이타,  전송 방식..등등) 
+ *     HttpServletResponse :  클라이언트에 응답하기 위한 정보    ( HTML 정보) 
+ */  

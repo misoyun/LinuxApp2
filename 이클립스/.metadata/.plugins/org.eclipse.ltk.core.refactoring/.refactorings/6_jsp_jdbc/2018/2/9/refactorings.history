@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;list.jsp&apos; to &apos;bang&apos;&#x0D;&#x0A;- Original project: &apos;6_jsp_jdbc&apos;&#x0D;&#x0A;- Destination element: &apos;bang&apos;&#x0D;&#x0A;- Original element: &apos;list.jsp&apos;" description="Copy file" element1="WebContent/jdbc_test/list.jsp" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1519798989995" target="/application/WebContent/bang" units="0" version="1.0"/>
+</session>
